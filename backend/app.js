@@ -1,5 +1,4 @@
 const cors = require('cors');
-const functions = require("firebase-functions"); 
 const express = require("express");
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
@@ -178,4 +177,3 @@ app.post("/delete" , (req, res) => {
 
 app.listen(port, () => console.log(`Server started at port: ${port}`));
 
-exports.api = functions.https.onRequest(app);
