@@ -11,8 +11,8 @@ import {
 import NavBar from "./navbar";
 import Card from "./card";
 import Home from "./Home";
-import View from "./expandview"
-
+import View from "./expandview";
+import url from "./env";
 
 
 function App() {

@@ -17,8 +17,7 @@ import {
   import Chart from 'chart.js/auto';
   import { useParams } from "react-router-dom";
   import { Link } from "react-router-dom";
-
-
+  import url from "./env";
 
 const black = "rgba(0, 0, 0, 0.75)"
 let Element ="";
@@ -41,7 +40,7 @@ const doneArray = [];
   //changes the count
   async function updateSever(){
     try{
-      await axios.post(  "http://localhost:4000/count" , {
+      await axios.post(  url + "/count" , {
       id ,
       Element
       })
@@ -64,7 +63,7 @@ const doneArray = [];
 
  async function Delete(){
   try{
-      await axios.post( "http://localhost:4000/delete" , {
+      await axios.post( url + "delete" , {
        id
       })
   }catch(error){
@@ -75,7 +74,7 @@ const doneArray = [];
      
   //gets the item
 useEffect(()=>{
-  axios.get("http://localhost:4000/data").then(function(res){
+  axios.get(url + "/data").then(function(res){
     allItem = res.data;
     allItem.map((item) => {
      if(item._id == id){

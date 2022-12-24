@@ -3,6 +3,7 @@ import axios, { Axios } from 'axios';
 import { Link } from "react-router-dom";
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import { spacing } from '@mui/system';
+import url from "./env";
 
 function ReactCard(props){
 const [color , setColor] = useState(props.color);
@@ -20,7 +21,7 @@ async function add(){
   setWidth((count/props.times)*100 + "%");
   setWidthF(count+1 + "/" + props.times);
   try{
-      await axios.post( "http://localhost:4000/count" , {
+      await axios.post( url + "/count" , {
      id ,
       Element
       })

@@ -27,7 +27,7 @@ function Home(){
 
   useEffect(  () => {
     try{
-      axios.get("https://excited-lion-cape.cyclic.app/data").then(function(res){
+      axios.get(url +"/data").then(function(res){
            setHabbitListLeft(res.data);
            setIsLoading(false);
        })

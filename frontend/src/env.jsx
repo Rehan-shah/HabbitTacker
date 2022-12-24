@@ -1,3 +1,3 @@
-const url =  "http://192.168.1.103:3000"
+const url =  "https://excited-lion-cape.cyclic.app"
 
 export default url 

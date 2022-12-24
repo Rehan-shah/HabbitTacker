@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import { url } from "inspector";
 
 function InputPage(props){
 
@@ -64,7 +65,7 @@ async function save(){
 
   console.log(trackerProps);
   try{
-      await axios.post( "http://localhost:4000/input" , {
+      await axios.post( url+"/input" , {
         trackerProps
       })
   }catch(error){
