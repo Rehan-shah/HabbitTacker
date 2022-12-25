@@ -40,7 +40,7 @@ function  NavBar() {
 
   return (
     <>
-      <div className="nav">
+      <div className="nav desk-nav">
      <Link to="/"><HomeRoundedIcon
           sx={sxSame}
           name="id"
