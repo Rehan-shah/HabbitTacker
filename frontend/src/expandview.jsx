@@ -63,7 +63,7 @@ const doneArray = [];
 
  async function Delete(){
   try{
-      await axios.post( url + "delete" , {
+      await axios.post( url + "/delete" , {
        id
       })
   }catch(error){

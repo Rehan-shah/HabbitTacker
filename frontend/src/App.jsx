@@ -12,7 +12,7 @@ import NavBar from "./navbar";
 import Card from "./card";
 import Home from "./Home";
 import View from "./expandview";
-import url from "./env";
+
 
 
 function App() {
@@ -29,6 +29,8 @@ function App() {
 	}
 
 	return(
+
+		<div width="500px">
         <BrowserRouter>
 		<Routes>
 		<Route path="/" element={<Home />}></Route>
@@ -37,7 +39,7 @@ function App() {
 		</Routes>
 		<NavBar/>
 		</BrowserRouter> 
-	
+		</div>
 	)
 }
 

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import { url } from "inspector";
-
+import url from "./env.jsx"
+console.log(url);
 function InputPage(props){
-
   const [trackerProps , setTrackerProps] = useState({
     Name:"",
     repatation:"Daily",
