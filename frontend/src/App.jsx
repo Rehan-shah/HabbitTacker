@@ -16,28 +16,11 @@ import { useState, useEffect} from "react";
 
 
 
-function App() {
-	const [isDesktop, setIsDesktop] = useState(false);
 
-  useEffect(() => {
-      if (window.innerWidth >= 1024) {
-        setIsDesktop(true);
-      } else {
-        setIsDesktop(false);
-      }
-  }, []);
 
 
 	return(
 		<>
-		{isDesktop && (
-			<img src="/Screenshot 2022-12-25 at 8.41.22 PM.png" style={{
-			 width: "420px",
-position: "absolute",
-left: "435px",
-top: "0px"
-			}}></img>
-		  )}
 		  <div className="desk-control">
 			<BrowserRouter>
 			  <Routes>
