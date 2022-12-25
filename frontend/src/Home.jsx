@@ -35,12 +35,12 @@ function Home(){
         console.log(err);
         setIsLoading(false);
        }
-    })
+    },[])
 
     return (
         <div>
           {isLoading ? (
-            <div class="text-center">
+            <div className="text-center">
             <h1>Loading</h1>
   <div className="spinner-border" role="status">
     <span className="sr-only"></span>

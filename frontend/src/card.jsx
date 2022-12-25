@@ -37,22 +37,27 @@ return (
           <ul className="list-group">
             <li className="list-group-item"/>
               <div className="content">
-              <table >
-              <tbody>
-                  <tr>
-                      <td><h1>{props.Name}</h1></td>
-                    
-                      <td style={{width:"10%" , position:"relative",left:"10%" }} rowSpan="2" > <h3 style={{display:"inline-block"}}>{count}</h3> </td>
-                     <Link to={Exlink}><td style={{position: "relative" , left: "90%"}}><ArrowForwardIosRoundedIcon
-                        style={{color: "rgba(0, 0, 0, 0.75)"}}
-                        sx={{mt:3 }}
-                      /></td></Link>
-                  </tr>
-                  <tr>
-                  <td ><h2>{props.repatation}: {widthFrac}</h2></td>
-                  </tr>
-                  </tbody>
-              </table>
+              <table>
+  <tbody>
+    <tr>
+      <td><h1>{props.Name}</h1></td>
+      <td style={{width:"10%", position:"relative",left:"10%" }} rowSpan="2"> <h3 style={{display:"inline-block"}}>{count}</h3> </td>
+      <Link to={Exlink}>
+        <tr>
+          <td style={{position: "relative" , left: "90%"}}>
+            <ArrowForwardIosRoundedIcon
+              style={{color: "rgba(0, 0, 0, 0.75)"}}
+              sx={{mt:3 }}
+            />
+          </td>
+        </tr>
+      </Link>
+    </tr>
+    <tr>
+      <td><h2>{props.repatation}: {widthFrac}</h2></td>
+    </tr>
+  </tbody>
+</table>
               </div>
               <div className="progress">
                 <div className="progress-bar" role="progressbar" style={{width: `${widthPrec}`, backgroundColor: `${color}` }} aria-valuemin="0" aria-valuemax="100"></div>

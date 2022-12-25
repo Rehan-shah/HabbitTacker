@@ -7,9 +7,9 @@ const { update } = require("lodash");
 const app = express();
 const { v4: uuidv4 } = require('uuid');
 mongoose.set('strictQuery', false);
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
-app.use(cors())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cors());
 
 const port = process.env.PORT || 4000;
 
@@ -34,17 +34,20 @@ app.get("/",function(req,res){
 })
 
 app.get("/data",async (req,res) => {
+	
 	habbitItem.find({},(err, items ) => 
-	{res.send(items)})
+	{res.send(items)});
+
 })
+
 
 
 app.post("/input", async (req,res) => {
 
-	var { trackerProps } = req.body; 
-	const name = trackerProps.Name
+	var { trackerProps } = req.body;
 	const newItem = new habbitItem (trackerProps);
 	newItem.save();
+	res.send(trackerProps);
 	const today = new Date();
 const dayOfWeek = today.getDay();
 const dayOfMonth = today.getDate();
@@ -89,9 +92,7 @@ const dayOfYear = Math.floor((Date.UTC(today.getFullYear(), today.getMonth(), to
 
 app.post("/count" , (req,res) => {
 	let { id , Element } = req.body;
-	
 	habbitItem.find({_id:id},(err, items) => {
-
  	let x = items[0].count ;
     let y = items[0].times ;
 
@@ -106,9 +107,7 @@ app.post("/count" , (req,res) => {
 				});
 			}
 		});
-	}else{}}
-	else{
-      
+	}else{
 		x = x-1;
 			habbitItem.updateOne({_id:id},{count:x},function(err){
 				if(err){
@@ -120,7 +119,7 @@ app.post("/count" , (req,res) => {
 				}
 			});
 	}
-})});
+}})});
 
 
 app.get("/hi", (req,res) => {

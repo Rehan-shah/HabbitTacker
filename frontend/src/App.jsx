@@ -29,17 +29,14 @@ function App() {
 	}
 
 	return(
-
-		<div width="500px">
         <BrowserRouter>
 		<Routes>
 		<Route path="/" element={<Home />}></Route>
-	    <Route path="input-page" element={<InputPage object={obj} />}></Route>
+	    <Route path="/input-page" element={<InputPage  />}></Route>
 		<Route path="/expand/:id" element={<View />}></Route>
 		</Routes>
 		<NavBar/>
 		</BrowserRouter> 
-		</div>
 	)
 }
 
