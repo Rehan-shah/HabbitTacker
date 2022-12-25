@@ -75,7 +75,7 @@ async function save(){
 
 
   return (
-    <div className=".Allbody">
+    <div className="Allbody">
   <form onSubmit={(event)=> {event.preventDefault()}}>
    <div>
       <h1 style={{display:"inline"}}>CREATE</h1>

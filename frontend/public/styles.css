@@ -8,6 +8,7 @@
       font-family: avenirheavy;
       margin: 20px;
       margin-top: 50px;
+      overflow-x: hidden;
   }
   
   h2{
@@ -227,4 +228,12 @@ margin-left:43%
  .desk-control{
   margin: auto;
   width: 500px;
+ }
+
+ .Allbody{
+  width: 360px;
+ }
+
+ .openView{
+  width: 350px;
  }
