@@ -237,4 +237,13 @@ margin-left:43%
  .Disclammer h1{
     color:  #FF2400;
  }
-  
+
+ .Allbody , .openView {
+     width: 370px;
+ }
+
+ @media (min-width: 1280px) {
+ .btn-danger{
+  margin-left: 12%;
+ }
+ }
