@@ -52,7 +52,7 @@ function  NavBar() {
           onClick={change2} 
           style={{ color: `${colorAdd}`, fontSize:size}} 
         /> </Link>
-       <Link to="setting"><SettingsIcon 
+       <Link to="/setting"><SettingsIcon 
             sx={sxSame}
             onClick={change3} 
           style={{color:`${colorSett}`,  fontSize:size}}

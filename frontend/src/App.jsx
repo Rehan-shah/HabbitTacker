@@ -12,6 +12,7 @@ import NavBar from "./navbar";
 import Card from "./card";
 import Home from "./Home";
 import View from "./expandview";
+import Setting from "./setting";
 import { useState, useEffect} from "react";
 
 
@@ -27,6 +28,7 @@ function App() {
 				<Route path="/" element={<Home />}></Route>
 				<Route path="/input-page" element={<InputPage />}></Route>
 				<Route path="/expand/:id" element={<View />}></Route>
+				<Route path="/setting" element={<Setting />}></Route>
 			  </Routes>
 			  <NavBar />
 			</BrowserRouter>
